@@ -1,0 +1,17 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.logo{
+    filter: brightness(1.1);
+    mix-blend-mode: multiply;
+}
+
+.cuerpo{
+    background-color: antiquewhite;
+}
+
+.pie{
+    background-color: black;
+}
