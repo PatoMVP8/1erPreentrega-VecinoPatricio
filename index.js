@@ -1,4 +1,4 @@
-  let entrada = prompt ("¿Es usted mayor de edad? Responda con Si/No".toLowerCase())
+let entrada = prompt ("¿Es usted mayor de edad? Responda con Si/No" .toLowerCase())
 
   if(entrada === "no"){
       alert("Realice la encuesta con un mayor de edad.")
@@ -9,17 +9,28 @@
               let mensaje = `El promedio de edad de la gente que ingreso a la web es de: ${promedio}`;
              alert(mensaje);}
       let num1 = parseInt(prompt("Ingrese su edad"));
-      alert (`El 1er participante tiene: ${num1}`);
+      
      let num2 = parseInt(prompt("Ingrese su edad"));
-     alert (`El 2do participante tiene: ${num2}`);
+     
      let num3 = parseInt(prompt("Ingrese su edad"));
-     alert (`El 3er participante tiene: ${num3}`);
+    
       let num4 = parseInt(prompt("Ingrese su edad"));
-      alert (`El 4to participante tiene: ${num4}`);
+     
       let num5 = parseInt(prompt("Ingrese su edad"));
-      alert (`El 5to participante tiene: ${num5}`);
-     promediar(num1, num2, num3, num4, num5);
-      alert ("Los datos fueron completados exitosamente");
+      
+      let user1 = {name: "participante 1" ,edad: num1};
+      let user2 = {name: "participante 2" ,edad: num2};
+      let user3 = {name: "participante 3" ,edad: num3};
+      let user4 = {name: "participante 4" ,edad: num4};
+      let user5 = {name: "participante 5" ,edad: num5};
+      
+      let participantes = [ user1, user2, user3, user4, user5 ];
+      
+      function calcularPromedio(participantes) {
+        return participantes.reduce((acum, user) => acum + user.edad, 0) / participantes.length;
+      }
+      
+      alert(calcularPromedio(participantes)); 
 
       const edades = [num1, num2, num3, num4, num5];
  alert (`las edades presentadas fueron ${edades.join(", ")}.`)
@@ -28,8 +39,6 @@
    }else{
       alert("introduzca un dato valido")
    }
-
-   
 
        
    
