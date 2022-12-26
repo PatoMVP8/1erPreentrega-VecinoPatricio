@@ -4,6 +4,9 @@ let entrada = prompt ("¿Es usted mayor de edad? Responda con Si/No" .toLowerCas
       alert("Realice la encuesta con un mayor de edad.")
    
    }else if(entrada === "si"){
+
+      
+
       function promediar(num1, num2, num3, num4, num5){
          let promedio = (num1 + num2 + num3 + num4 + num5)/5;
               let mensaje = `El promedio de edad de la gente que ingreso a la web es de: ${promedio}`;
@@ -36,6 +39,19 @@ let entrada = prompt ("¿Es usted mayor de edad? Responda con Si/No" .toLowerCas
  alert (`las edades presentadas fueron ${edades.join(", ")}.`)
  alert (edades.sort((a,b)=> a-b));
 
+ localStorage.setItem("datos", JSON.stringify(participantes));
+ 
+ let participantesStorage = JSON.parse(localStorage.getItem("datos"));
+
+ 
+ participantesStorage.forEach((user) => {
+   let div = document.createElement("div");
+   div.innerHTML = ` <h2> ID: ${user.edad} </h2>`   ;
+
+   contenedor.append(div);
+ });
+
+ 
    }else{
       alert("introduzca un dato valido")
    }
