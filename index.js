@@ -1,7 +1,8 @@
 let entrada = prompt ("¿Es usted mayor de edad? Responda con Si/No" .toLowerCase())
+let contenedor = document.getElementById("container");
 
   if(entrada === "no"){
-      alert("Realice la encuesta con un mayor de edad.")
+      alert("Realice la encuesta con un mayor de edad.");
    
    }else if(entrada === "si"){
 
@@ -46,7 +47,7 @@ let entrada = prompt ("¿Es usted mayor de edad? Responda con Si/No" .toLowerCas
  
  participantesStorage.forEach((user) => {
    let div = document.createElement("div");
-   div.innerHTML = ` <h2> ID: ${user.edad} </h2>`   ;
+   div.innerHTML = ` <h2> Edad ${user.edad} </h2>`   ;
 
    contenedor.append(div);
  });

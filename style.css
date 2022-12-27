@@ -10,8 +10,16 @@
 
 .cuerpo{
     background-color: antiquewhite;
+    
 }
 
 .pie{
     background-color: black;
+}
+
+.indec{
+    display: flex;
+    justify-content: center;
+    padding-right: 10px;
+    padding-left: 10px;
 }
